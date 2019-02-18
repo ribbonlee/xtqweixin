@@ -1,0 +1,42 @@
+<view style="position:fixed; top:0px;width:100%;z-index:9999">
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'success' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <i-cell value="{{date}}">
+    <picker mode="date" fields="month" start="2016-09-01" end="2027-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        会计期间
+      </view>
+    </picker>
+  </i-cell>
+</view>
+<view style='margin:90px 0' hidden="{{currentTab!==0}}">
+  <view wx:for="{{invoiceList}}" wx:for-item="item">
+    <i-card data-id="{{item.id}}" title="{{item.invoice_type==0?'普通':'专用'}}发票" extra="查看详情" full thumb="../../public/images/timg.jpg" bindtap="skip">
+      <view slot="content">
+        <text>金额：{{item.amount}} \n
+            税额：{{item.tax}} \n
+            销售方：{{item.supply_name}}
+      </text>
+      </view>
+      <!-- <view slot="footer">版权所有</view> -->
+    </i-card>
+  </view>
+</view>
+<view style='margin:90px 0' hidden="{{currentTab!==1}}">
+  <view wx:for="{{failList}}" wx:for-item="item">
+    <i-card data-id="{{item.id}}" data-fa="{{item.is_fa}}" data-date="{{item.bill_date}}" data-kpje="{{item.kpje==null?'':item.kpje}}" data-jym="{{item.jym==null?'':item.jym}}" data-fpdm="{{item.fpdm == null?'':item.fpdm}}" data-fphm="{{item.fphm == null?'':item.fphm}}" data-kprq="{{item.kprq == '00000000'?'':item.kprq}}" title="{{item.invoice_type==0?'普通':'专用'}}发票" extra="手动编辑" full thumb="../../public/images/timg.jpg" bindtap="manual">
+      <view slot="content">
+        <text>发票代码：{{item.fpdm == null?'':item.fpdm}} \n
+            发票号码：{{item.fphm == null?'':item.fphm}} \n
+            开票日期：{{item.kprq == '00000000'?'':item.kprq}}
+      </text>
+      </view>
+      <!-- <view slot="footer">版权所有</view> -->
+    </i-card>
+  </view>
+</view>
+<view style="text-align:center;font-size:16px;margin-top:150px;color:gray" hidden="{{hidden}}">
+  <text>当前会计期间无记录\n</text>
+  <text style='font-size:13px;'>下拉刷新试试</text>
+</view>

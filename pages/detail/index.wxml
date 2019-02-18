@@ -1,0 +1,22 @@
+<i-card title="增值税{{invoiceDetail.invoice_type==0?'普通':'专用'}}发票" thumb="/public/images/timg.jpg">
+  <view slot="content">
+    <text>金额：{{invoiceDetail.amount}} \n
+            税额：{{invoiceDetail.tax}} \n
+            价税合计： {{invoiceDetail.amount+invoiceDetail.tax}} \n
+            发票代码： {{invoiceDetail.fpdm}} \n
+            发票号码： {{invoiceDetail.fphm}} \n
+            开票日期： {{invoiceDetail.kprq}} \n
+            固定资产： {{invoiceDetail.is_fa==0?'否':'是'}} \n
+            销售方：{{invoiceDetail.supply_name}}\n
+            销售纳税人识别号： {{invoiceDetail.supply_identify_code}} \n
+            购买方： {{invoiceDetail.buy_name}}
+      </text>
+    <view wx:for="{{invoiceItemDetail}}" wx:for-item="item">
+    <view class="line-css"></view>
+      <text>摘要：{{item.abstract_info}} \n
+            单价：{{item.unit_price}} \n
+            税额：{{item.tax}}
+      </text>
+    </view>
+  </view>
+</i-card>

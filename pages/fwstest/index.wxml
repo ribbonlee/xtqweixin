@@ -1,0 +1,2 @@
+<view data-index="2" class="smreward" bindtap="sumbtn">宁波百恒确定支付</view>
+<view data-index="1" class="smreward" bindtap="sumbtn">镇江嘉元确定支付</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发票详情",
+  "usingComponents": {
+    "i-card": "../../dist/card/index"
+  }
+}

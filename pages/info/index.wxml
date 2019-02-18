@@ -1,0 +1,13 @@
+<!--用户信息  -->
+<view class="container">
+  <view class="header" style='background: -webkit-linear-gradient(top, rgba(27,130,209, 1), rgba(27,130,209, 0))'>
+    <view class='shop-Info'>
+      <view class="logo">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>
+  </view>
+  <i-input value="{{user_name}}" title="用户名" placeholder="用户名" bind:change="userNameInput" />
+  <i-input value="{{user_company_name}}" title="公司名" placeholder="公司名" bind:change="userCompanyNameInput" />
+  <i-button bind:click="handleClick" type="primary">提交信息</i-button>
+</view>

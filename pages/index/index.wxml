@@ -1,0 +1,33 @@
+<view class="logo">
+  <image src="/public/images/logo1.jpg" mode="aspectFit"></image>
+</view>
+<view>
+  <i-notice-bar icon="systemprompt" loop>
+    凭证EXCEL请登陆https://www.bangbangzhang.cn下载，新用户系统赠送5次免费票据识别。
+  </i-notice-bar>
+  <i-cell-group>
+    <i-cell title="余额" label="可用次数：{{balance*10}}次" value="￥{{balance}}"></i-cell>
+    <i-cell value="{{date}}">
+      <picker mode="date" fields="month" start="2016-09-01" end="2027-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          会计期间
+        </view>
+      </picker>
+    </i-cell>
+    <i-cell title="固定资产">
+      <i-switch value="{{is_fa}}" bind:change="onChange" slot="footer">
+        <i-icon type="right" slot="open"></i-icon>
+        <i-icon type="close" slot="close"></i-icon>
+      </i-switch>
+    </i-cell>
+  </i-cell-group>
+  <i-button bind:click="handleClick" type="primary">点击扫描</i-button>
+  <view style="text-align:center;color:rgb(45,140,240);font-size:24rpx" bindtap='camera'>
+    <text>无法识别二维码？</text>
+    <i-icon type="camera_fill" />
+    <text>拍照上传</text>
+  </view>
+  <loading hidden="{{hidden}}">
+    处理中...
+  </loading>
+</view>

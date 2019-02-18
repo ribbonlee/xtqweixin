@@ -1,0 +1,13 @@
+<i-input type="number" right title="发票代码" mode="wrapped" placeholder="请输入10位或12位的发票代码" bind:change="fpdm" bind:blur="blur" value="{{fpdm}}"/>
+<i-input type="number" right title="发票号码" mode="wrapped" placeholder="请输入8位的发票号码" bind:change="fphm" value="{{fphm}}" />
+<i-input type="number" right title="开票日期" mode="wrapped" placeholder="示例：20180718" bind:change="kprq" value="{{kprq}}" />
+<view hidden='{{jym_hidden}}'>
+  <i-input type="digit" right title="校验码" mode="wrapped" placeholder="请输入校验码后六位" bind:change="jym" value="{{jym}}"/>
+</view>
+<view hidden='{{kpje_hidden}}'>
+  <i-input type="digit" right title="开票金额" mode="wrapped" placeholder="请输入开票金额" bind:change="kpje" value="{{kpje}}"/>
+</view>
+<i-button bind:click="handleClick" type="primary">点击提交</i-button>
+<loading hidden="{{hidden}}">
+  处理中...
+</loading>

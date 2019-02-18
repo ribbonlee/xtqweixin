@@ -1,0 +1,33 @@
+@keyframes kf-marque-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.3%);
+  }
+}
+
+page {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+.header {
+  width: 100%;
+  /* position: relative; */
+  /* color: #000; */
+   transition: all 0.6s ease-in-out; 
+}
+.logo{
+    text-align: center;
+}
+.logo image{
+    display: block;
+    margin: 0 auto;
+}

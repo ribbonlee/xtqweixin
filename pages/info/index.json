@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "完善资料",
+  "usingComponents": {
+    "i-button": "../../dist/button/index",
+    "i-input": "../../dist/input/index"
+  }
+}

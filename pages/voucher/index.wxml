@@ -1,0 +1,18 @@
+<!--用户信息  -->
+<view class="container">
+  <view class="header" style='background: -webkit-linear-gradient(top, rgba(27,130,209, 1), rgba(27,130,209, 0))'>
+    <view class='shop-Info'>
+      <view class="logo">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>
+  </view>
+  <i-cell value="{{date}}">
+    <picker mode="date" fields="month" start="2016-09-01" end="2027-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        会计期间
+      </view>
+    </picker>
+  </i-cell>
+  <i-button bind:click="handleClick" type="primary">查看凭证</i-button>
+</view>

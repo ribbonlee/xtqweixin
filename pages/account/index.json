@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "wxc-avatar": "../../../dist/packages/@minui/wxc-avatar/dist/index",
+    "wxc-button": "../../../dist/packages/@minui/wxc-button/dist/index",
+    "wxc-icon": "../../../dist/packages/@minui/wxc-icon/dist/index",
+    "wxc-label": "../../../dist/packages/@minui/wxc-label/dist/index"
+  }
+}

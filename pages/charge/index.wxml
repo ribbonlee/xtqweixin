@@ -1,0 +1,31 @@
+<!--用户信息  -->
+<view class="container">
+  <view class="header" style='background: -webkit-linear-gradient(top, rgba(27,130,209, 1), rgba(27,130,209, 0))'>
+    <view class='shop-Info'>
+      <view class="logo">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>
+  </view>
+  <view class="moeny">
+    <view class="{{index == value ?  'action' : '' }}" wx:for="{{Marr}}" wx:key="{{index}}" bindtap="actionFn" id="{{index}}">{{item}}</view>
+  </view>
+  <!-- <view class="other" bindtap="otherFn">其他金额</view> -->
+  <view class="smreward" bindtap="sumbtn">确定支付</view>
+</view>
+<view class="mask" wx:if="{{close}}">
+  <view class="mask-back"></view>
+  <view class="mask-text">
+    <view class="title">
+      <image src="/public/images/close.png" bindtap="closeFn"></image>
+      <text>其他金额</text>
+    </view>
+    <view class="txmoeny">
+      <text>金额(元)</text>
+      <input type="number" bindinput="inputFn" style="margin-left:30rpx" />
+    </view>
+    <view class="sumbtn" bindtap="sumbtn">
+      <button>确定支付</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "票据记录",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "i-card": "../../dist/card/index",
+    "i-panel": "../../dist/panel/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-notice-bar": "../../dist/notice-bar/index",
+    "i-button": "../../dist/button/index",
+    "i-switch": "../../dist/switch/index",
+    "i-icon": "../../dist/icon/index",
+    "i-toast": "../../dist/toast/index",
+    "i-spin": "../../dist/spin/index"
+  }
+}
